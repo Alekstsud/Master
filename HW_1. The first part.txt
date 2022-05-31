@@ -1,0 +1,87 @@
+HW_1. The first part
+Linux terminal (GitBash) commands
+
+
+1) Посмотреть где я 
+ pwd
+2) Создать папку 
+ mkdir foldername (group_30_1)
+3) Зайти в папку 
+ cd foldername/ (group_30_1)
+4) Создать 3 папки 
+ mkdir foldername foldername foldername (qa_1 qa_2 qa_3)
+5) Зайти в любоую папку 
+ cd foldername (qa_1)
+6) Создать 5 файлов (3 txt, 2 json) 
+ touch name.format name.format ...  
+ cat > name.format (qq1.txt, qq2.txt, qq3.txt, qq4.json, qq5.json)
+7) Создать 3 папки 
+ mkdir foldername foldername ... (qa_4 qa_5 qa_6)
+8. Вывести список содержимого папки 
+ ls -la(-l)
+9) + Открыть любой txt файл 
+cat >> name.txt (qq1.txt) - для редактирования/добавления строк -  такая же команда 
+10) + написать туда что-нибудь, любой текст. 
+- после каждого ввода строки нажимать enter и в конце ctrl+c
+11) + сохранить и выйти.
+ - ctrl+c
+12) Выйти из папки на уровень выше 
+ cd ../
+13) переместить любые 2 файла, которые вы создали, в любую другую папку
+ mv foldername/name.format foldername/name.format (mv qq1.txt qq2.txt qa_1/) (откуда - куда)
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку
+ cp foldername/name.format foldername/name.format (cp qq1.txt qq2.txt qa_1/)
+15) Найти файл по имени 
+find . -name qq1.txt 
+16) просмотреть содержимое в реальном времени 
+ cat name.txt (qq1.txt) |  tail -f qq1.txt 
+17) вывести несколько первых строк из текстового файла 
+ head -4(number) name.txt
+18) вывести несколько последних строк из текстового файла 
+ tail -4(number) name.txt
+19) просмотреть содержимое длинного файла
+ less name.txt
+20) вывести дату и время 
+date
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+
+$ curl 'http://162.55.220.72:5005/terminal-hw-request'
+
+
+1.1)  http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)",
+ http://162.55.220.72:5005/get_method?name=(Aleksandr)&age=(32)"
+
+ "(Aleksandr)",
+  "(32)"
+
+
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+
+Создать файл: touch hw_1.sh
+
+Внести изменения: vim hw_1.sh
+
+нажать клавишу "i" ввести текст
+
+#!/bin/sh 
+cd group_30_1/
+mkdir qa_1 qa_2 qa_3
+cd qa_1/
+touch qq1.txt qq2.txt qq3.txt qq4.json qq5.json
+mkdir qa_4 qa_5 qa_6
+ls -la
+mv qq1.txt qq2.txt qa_1/ 
+
+Cохранить и выйти: "esc" ":wq"
+
+Выполнить скрипт: sh hw_1.sh
+
+
+
+  
